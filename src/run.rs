@@ -621,13 +621,13 @@ fn _run(mut state: State, session_path: PathBuf) -> Result<(), FxError> {
                                 }
                                 delete_pointer();
                                 go_to_info_line_and_reset();
-                                print!("z");
+                                print!("z ");
                                 show_cursor();
 
-                                let mut command: Vec<char> = vec!['z'];
+                                let mut command: Vec<char> = vec!['z',' '];
                                 screen.flush()?;
 
-                                let mut current_pos = 3;
+                                let mut current_pos = 4;
                                 'zoxide: loop {
                                     if let Event::Key(KeyEvent { code, .. }) = event::read()? {
                                         match code {
